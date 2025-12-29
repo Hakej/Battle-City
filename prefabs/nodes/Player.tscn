@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://c3dfsapht1vxl"]
+
+[ext_resource type="Material" uid="uid://g0mrmqprxdb7" path="res://materials/PlayerMaterial.tres" id="1_8o7d0"]
+[ext_resource type="Script" uid="uid://um1q6lxeuwv6" path="res://scripts/nodes/Player.gd" id="1_xjy0k"]
+[ext_resource type="PackedScene" uid="uid://buqw6fa5glyb" path="res://prefabs/nodes/Rocket.tscn" id="2_1aeqh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_20wce"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_20wce"]
+material = SubResource("StandardMaterial3D_20wce")
+
+[sub_resource type="BoxMesh" id="BoxMesh_8o7d0"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xjy0k"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_xjy0k")
+speed = 250.0
+rocket_scene = ExtResource("2_1aeqh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_20wce")
+surface_material_override/0 = ExtResource("1_8o7d0")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.7)
+mesh = SubResource("BoxMesh_8o7d0")
+surface_material_override/0 = ExtResource("1_8o7d0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_xjy0k")
+
+[node name="TankBarrel" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -1)

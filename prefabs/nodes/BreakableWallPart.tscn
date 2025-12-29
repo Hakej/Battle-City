@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkdrajvjsbiu5"]
+
+[ext_resource type="Script" uid="uid://w14b8elaclww" path="res://scripts/nodes/BreakableWallPart.gd" id="1_ffig8"]
+[ext_resource type="Material" path="res://materials/breakable_wall/BreakableWall.tres" id="1_vtuvi"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_6h331"]
+size = Vector3(0.25, 1, 0.25)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_65kw3"]
+size = Vector3(0.25, 1, 0.25)
+
+[node name="BreakableWallPart" type="StaticBody3D"]
+script = ExtResource("1_ffig8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_6h331")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("1_vtuvi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_65kw3")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_65kw3")

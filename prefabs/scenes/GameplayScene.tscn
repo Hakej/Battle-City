@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c84nt4jxyi5g2"]
+
+[ext_resource type="PackedScene" uid="uid://cftqfur1o7mp7" path="res://prefabs/maps/FirstMap.tscn" id="2_6sdd3"]
+[ext_resource type="PackedScene" uid="uid://c3dfsapht1vxl" path="res://prefabs/nodes/Player.tscn" id="2_pwg47"]
+
+[sub_resource type="Environment" id="Environment_pwg47"]
+background_energy_multiplier = 0.0
+ssr_enabled = true
+
+[node name="GameplayScene" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 10, 0)
+projection = 1
+size = 13.0
+
+[node name="Player" parent="." instance=ExtResource("2_pwg47")]
+transform = Transform3D(0.9998634, 0.016527515, 0, -0.016527515, 0.9998634, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.70710677, 0.5, -0.49999994, 0, 0.7071067, 0.7071068, 0.70710677, -0.5, 0.49999994, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_pwg47")
+
+[node name="FirstMap" parent="." instance=ExtResource("2_6sdd3")]

@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu18d5weenu82"]
+
+[ext_resource type="Script" uid="uid://mxeiydthxnv" path="res://scripts/nodes/BreakableWall.gd" id="1_gqnpa"]
+[ext_resource type="PackedScene" uid="uid://bkdrajvjsbiu5" path="res://prefabs/nodes/BreakableWallPart.tscn" id="2_ait5c"]
+
+[node name="BreakableWall" type="MeshInstance3D"]
+script = ExtResource("1_gqnpa")
+
+[node name="Offset" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.1)
+
+[node name="BreakableWallPart" parent="Offset" instance=ExtResource("2_ait5c")]
+
+[node name="BreakableWallPart2" parent="Offset" instance=ExtResource("2_ait5c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0, 0)
+
+[node name="BreakableWallPart3" parent="Offset" instance=ExtResource("2_ait5c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0, 0)
+
+[node name="BreakableWallPart4" parent="Offset" instance=ExtResource("2_ait5c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+
+[node name="BreakableWallPart5" parent="Offset" instance=ExtResource("2_ait5c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -0.25)
+
+[node name="BreakableWallPart6" parent="Offset" instance=ExtResource("2_ait5c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0, -0.25)
+
+[node name="BreakableWallPart7" parent="Offset" instance=ExtResource("2_ait5c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+
+[node name="BreakableWallPart8" parent="Offset" instance=ExtResource("2_ait5c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0, -0.25)

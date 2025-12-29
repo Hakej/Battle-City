@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://buqw6fa5glyb"]
+
+[ext_resource type="Script" uid="uid://cusa7cv3cu6a0" path="res://scripts/nodes/Rocket.gd" id="1_rlw3f"]
+[ext_resource type="PackedScene" uid="uid://cy3t2lcjbui77" path="res://prefabs/nodes/Explosion.tscn" id="2_ocauq"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7nkyn"]
+radius = 0.12
+height = 0.5
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rlw3f"]
+radius = 0.12
+height = 0.5
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ocauq"]
+radius = 0.12
+height = 0.5
+
+[node name="Rocket" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_rlw3f")
+explosion_scene = ExtResource("2_ocauq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_7nkyn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_rlw3f")
+
+[node name="Hitbox" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_ocauq")
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

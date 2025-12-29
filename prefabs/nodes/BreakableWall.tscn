@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3irypyyts1rv"]
+
+[ext_resource type="Script" uid="uid://mxeiydthxnv" path="res://scripts/nodes/BreakableWall.gd" id="1_ypo8r"]
+[ext_resource type="PackedScene" uid="uid://bkdrajvjsbiu5" path="res://prefabs/nodes/BreakableWallPart.tscn" id="2_ypo8r"]
+
+[node name="BreakableWall" type="MeshInstance3D"]
+script = ExtResource("1_ypo8r")
+
+[node name="Offset" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.1)
+
+[node name="BreakableWallPart" parent="Offset" instance=ExtResource("2_ypo8r")]
+
+[node name="BreakableWallPart2" parent="Offset" instance=ExtResource("2_ypo8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0, 0)
+
+[node name="BreakableWallPart3" parent="Offset" instance=ExtResource("2_ypo8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0, 0)
+
+[node name="BreakableWallPart4" parent="Offset" instance=ExtResource("2_ypo8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+
+[node name="BreakableWallPart14" parent="Offset" instance=ExtResource("2_ypo8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
+
+[node name="BreakableWallPart15" parent="Offset" instance=ExtResource("2_ypo8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0, 0.5)
+
+[node name="BreakableWallPart16" parent="Offset" instance=ExtResource("2_ypo8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0, 0.5)
+
+[node name="BreakableWallPart17" parent="Offset" instance=ExtResource("2_ypo8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0.5)
+
+[node name="BreakableWallPart5" parent="Offset" instance=ExtResource("2_ypo8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -0.25)
+
+[node name="BreakableWallPart13" parent="Offset" instance=ExtResource("2_ypo8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0.25)
+
+[node name="BreakableWallPart6" parent="Offset" instance=ExtResource("2_ypo8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0, -0.25)
+
+[node name="BreakableWallPart12" parent="Offset" instance=ExtResource("2_ypo8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0, 0.25)
+
+[node name="BreakableWallPart7" parent="Offset" instance=ExtResource("2_ypo8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+
+[node name="BreakableWallPart11" parent="Offset" instance=ExtResource("2_ypo8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.25)
+
+[node name="BreakableWallPart8" parent="Offset" instance=ExtResource("2_ypo8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0, -0.25)
+
+[node name="BreakableWallPart9" parent="Offset" instance=ExtResource("2_ypo8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0, 0.25)
+
+[node name="BreakableWallPart10" parent="Offset" instance=ExtResource("2_ypo8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0, 0.25)

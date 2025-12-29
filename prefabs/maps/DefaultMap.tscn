@@ -1,0 +1,199 @@
+[gd_scene load_steps=7 format=3 uid="uid://gxj7acxnbalw"]
+
+[ext_resource type="PackedScene" uid="uid://c3irypyyts1rv" path="res://prefabs/nodes/BreakableWall.tscn" id="1_jhqir"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qvymo"]
+size = Vector3(13, 1, 13)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jhqir"]
+size = Vector3(1, 1, 15)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5bwqj"]
+size = Vector3(1, 1, 15)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t1mv7"]
+size = Vector3(1, 1, 13)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4m1w0"]
+size = Vector3(1, 1, 13)
+
+[node name="DefaultMap" type="Node3D"]
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+mesh = SubResource("BoxMesh_qvymo")
+
+[node name="Walls" type="Node3D" parent="."]
+
+[node name="BreakableWall7" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="BreakableWall8" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="BreakableWall13" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="BreakableWall14" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -1)
+
+[node name="BreakableWall15" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2)
+
+[node name="BreakableWall16" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -3)
+
+[node name="BreakableWall17" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -4)
+
+[node name="BreakableWall18" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -5)
+
+[node name="BreakableWall19" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -6)
+
+[node name="BreakableWall20" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -6)
+
+[node name="BreakableWall21" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
+
+[node name="BreakableWall22" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -6)
+
+[node name="BreakableWall23" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -6)
+
+[node name="BreakableWall24" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+
+[node name="BreakableWall25" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -6)
+
+[node name="BreakableWall26" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -6)
+
+[node name="BreakableWall27" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -6)
+
+[node name="BreakableWall28" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -6)
+
+[node name="BreakableWall29" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -6)
+
+[node name="BreakableWall30" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -6)
+
+[node name="BreakableWall31" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -6)
+
+[node name="BreakableWall32" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -5)
+
+[node name="BreakableWall33" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -4)
+
+[node name="BreakableWall34" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -3)
+
+[node name="BreakableWall35" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -2)
+
+[node name="BreakableWall36" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -1)
+
+[node name="BreakableWall37" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 1)
+
+[node name="BreakableWall38" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 2)
+
+[node name="BreakableWall39" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 3)
+
+[node name="BreakableWall40" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 4)
+
+[node name="BreakableWall41" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 5)
+
+[node name="BreakableWall42" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 6)
+
+[node name="BreakableWall43" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 6)
+
+[node name="BreakableWall44" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 6)
+
+[node name="BreakableWall45" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 6)
+
+[node name="BreakableWall46" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 6)
+
+[node name="BreakableWall47" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 6)
+
+[node name="BreakableWall48" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="BreakableWall49" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 6)
+
+[node name="BreakableWall50" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 6)
+
+[node name="BreakableWall51" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 6)
+
+[node name="BreakableWall52" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 6)
+
+[node name="BreakableWall53" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 6)
+
+[node name="BreakableWall54" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6)
+
+[node name="BreakableWall55" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 5)
+
+[node name="BreakableWall56" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 4)
+
+[node name="BreakableWall57" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 3)
+
+[node name="BreakableWall58" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 2)
+
+[node name="BreakableWall59" parent="Walls" instance=ExtResource("1_jhqir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 1)
+
+[node name="OuterBorders" type="Node3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="OuterBorders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="OuterBorders/StaticBody3D"]
+shape = SubResource("BoxShape3D_jhqir")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="OuterBorders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="OuterBorders/StaticBody3D2"]
+shape = SubResource("BoxShape3D_5bwqj")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="OuterBorders"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 7)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="OuterBorders/StaticBody3D3"]
+shape = SubResource("BoxShape3D_t1mv7")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="OuterBorders"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, -7)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="OuterBorders/StaticBody3D4"]
+shape = SubResource("BoxShape3D_4m1w0")
